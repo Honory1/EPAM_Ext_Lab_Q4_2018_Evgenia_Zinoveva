@@ -57,7 +57,7 @@ namespace My_Calc.Controllers
                 case Operation.Share:
                     {
                         if (model.Y == 0)
-                            result = "Error! Dividing by zero.";
+                            result = "Error! Dividing by zero.";//todo pn строку - в ресурсы
                         else
                             result = (model.X / model.Y).ToString();
                         break;
@@ -69,7 +69,7 @@ namespace My_Calc.Controllers
                     }
             }
 
-            string dateTime = DateTime.Now.ToString("dd MMMM yyyy  HH:mm:ss");
+            string dateTime = DateTime.Now.ToString("dd MMMM yyyy  HH:mm:ss");//todo pn это можно в константу вынести
             
             model.Result = string.Format("{0} {1}{3}{2} = {4}\n", dateTime, model.X, model.Y, model.Op.DisplayName(), result);
 
