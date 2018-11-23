@@ -123,6 +123,9 @@
   <data name="Deduct" xml:space="preserve">
     <value>-</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error! Dividing by zero.</value>
+  </data>
   <data name="History" xml:space="preserve">
     <value>History</value>
   </data>

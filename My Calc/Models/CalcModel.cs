@@ -1,12 +1,12 @@
-﻿using My_Calc.Resources;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
-
-namespace My_Calc.Models
+﻿namespace My_Calc.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Linq;
+    using System.Web;
+    using My_Calc.Resources;
+
     public class CalcModel
     {
         [Display(Name = "x", ResourceType = typeof(CalcResources))]
@@ -22,5 +22,8 @@ namespace My_Calc.Models
 
         [Display(Name = "OpName", ResourceType = typeof(CalcResources))]
         public Operation Op { get; set; }
+
+        [Display(Name = "Error", ResourceType = typeof(CalcResources))]
+        public string Error { get; set; }
     }
 }

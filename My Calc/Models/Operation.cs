@@ -1,9 +1,9 @@
-﻿using My_Calc.Resources;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-
-namespace My_Calc.Models
+﻿namespace My_Calc.Models
 {
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using My_Calc.Resources;
+
     public enum Operation
     {
         [Display(Name = "Add", ResourceType = typeof(CalcResources))]

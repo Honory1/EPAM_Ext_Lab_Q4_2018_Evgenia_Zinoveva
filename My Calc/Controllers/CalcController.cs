@@ -1,26 +1,24 @@
-﻿using My_Calc.Helpers;
-using My_Calc.Models;
-using My_Calc.Resources;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace My_Calc.Controllers
+﻿namespace My_Calc.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Web.Mvc;
+    using My_Calc.Helpers;
+    using My_Calc.Models;
+
     public class CalcController : Controller
     {
-        const int DefaultX = 3;
-        const int DefaultY = 32;
-        const string DefaultResult = "No data";
+        private const int DefaultX = 3;
+        private const int DefaultY = 32;
+        private const string DefaultResult = "No data";
+        private string dateTime = DateTime.Now.ToString("dd MMMM yyyy  HH:mm:ss");
 
-        public static List<string> Results = new List<string>();
+        public static List<string> Results { get; protected set; } = new List<string>();
 
         // GET: Calc
         public ActionResult Index()
         {
-            return View();
+            return this.View();
         }
 
         /// <summary>
@@ -29,7 +27,7 @@ namespace My_Calc.Controllers
         /// <returns></returns>
         public ActionResult Add()
         {
-            return View(new CalcModel() { X = DefaultX , Y = DefaultY, Result = DefaultResult });
+            return this.View(new CalcModel() { X = DefaultX, Y = DefaultY, Result = DefaultResult });
         }
 
         /// <summary>
@@ -40,7 +38,7 @@ namespace My_Calc.Controllers
         [HttpPost]
         public ActionResult Add(CalcModel model)
         {
-            string result = "";
+            string result = "No data";
 
             switch (model.Op)
             {
@@ -49,33 +47,39 @@ namespace My_Calc.Controllers
                         result = (model.X + model.Y).ToString();
                         break;
                     }
+
                 case Operation.Deduct:
                     {
                         result = (model.X - model.Y).ToString();
                         break;
                     }
+
                 case Operation.Share:
                     {
                         if (model.Y == 0)
+                        {
                             result = "Error! Dividing by zero.";
+                        }
                         else
+                        {
                             result = (model.X / model.Y).ToString();
+                        }
+
                         break;
                     }
+
                 case Operation.Multiply:
                     {
                         result = (model.X * model.Y).ToString();
                         break;
                     }
-            }
-
-            string dateTime = DateTime.Now.ToString("dd MMMM yyyy  HH:mm:ss");
+            }           
             
-            model.Result = string.Format("{0} {1}{3}{2} = {4}\n", dateTime, model.X, model.Y, model.Op.DisplayName(), result);
+            model.Result = string.Format("{0} {1}{3}{2} = {4}\n", this.dateTime, model.X, model.Y, model.Op.DisplayName(), result);
 
             Results.Add(model.Result);
 
-            return View(model);
+            return this.View(model);
         }
     }
 }
