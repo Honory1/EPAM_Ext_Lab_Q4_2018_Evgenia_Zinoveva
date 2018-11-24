@@ -57,13 +57,10 @@
                 case Operation.Share:
                     {
                         if (model.Y == 0)
-<<<<<<< HEAD
+
                         {
-                            result = "Error! Dividing by zero.";
+                            result = Resources.CalcResources.Error;
                         }
-=======
-                            result = "Error! Dividing by zero.";//todo pn строку - в ресурсы
->>>>>>> aa43406b5f3da7f70ea7b3de7f33e647b8dcf43d
                         else
                         {
                             result = (model.X / model.Y).ToString();
@@ -77,13 +74,8 @@
                         result = (model.X * model.Y).ToString();
                         break;
                     }
-<<<<<<< HEAD
-            }           
-=======
-            }
 
-            string dateTime = DateTime.Now.ToString("dd MMMM yyyy  HH:mm:ss");//todo pn это можно в константу вынести
->>>>>>> aa43406b5f3da7f70ea7b3de7f33e647b8dcf43d
+            }                      
             
             model.Result = string.Format("{0} {1}{3}{2} = {4}\n", this.dateTime, model.X, model.Y, model.Op.DisplayName(), result);
 
