@@ -1,0 +1,58 @@
+<!DOCTUPE HTML>
+<html>
+	<head>
+		<title> Registration </title>
+		<link type="image/gif" rel="shortcut icon" href="Images/cmr.gif" />		
+		<link rel="stylesheet" type="text/css" href="Styles/styles.css"/>
+	</head>
+	
+	<body>
+		<header>
+			<div class="header-right"><button><a href="LogIn.html"> LOGIN </a></button></div>
+		</header>
+	
+		<nav>
+			<h3>Navigation</h3>
+            <div class="nav-btn"><button><a href="LogIn.html">LOGIN</a></button></div><br>
+			<div class="nav-btn"><button><a href="Table.html">TABLE</a></button></div><br>
+			<div class="nav-btn"><button><a href="ModalWindowStatic.html">MODAL WINDOWS STATIC</a></button></div><br>
+			<div class="nav-btn"><button><a href="ModalWindowDinamic.html">MODAL WINDOWS DINAMIC</a></button></div>
+			
+		</nav>
+	
+		<article>	
+			<form method="post" action="form.php">
+		
+			<fieldset>
+				<legend>Registration</legend>
+			
+				<label><input class="reg" type="text" required placeholder = "Your Invite Key"></label><br>
+				<label><input class="name" type="text" required placeholder = "First Name"></label>
+				<label><input class="name" type="text" required placeholder = "Last Name"></label><br><br>
+				<label><input class = "reg" type = "email" required placeholder = "Email"></label><br>
+				<label><input class = "reg" type = "password" required placeholder = "New Password"></label><br>
+				<label><input class = "reg" type="date" id = "theDate" required placeholder = "Date"></label><br>
+				<script>
+					document.getElementById('theDate').value = new Date().toISOString().substring(0, 10);
+				</script>
+				<button type = "submit">REGISTER</button>			
+			</fieldset>	
+		</article>
+		
+		<aside>
+			<h3>Aside</h3>
+            <p>
+                blah, blah, blah...
+                blah, blah, blah...
+            </p>
+		</aside>
+		
+		<footer>
+			<ul class="breadcrumb">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Web Disigning</a></li>
+				<li class="active">Bootstrap</li>
+			</ul>
+		</footer>
+	</body>
+</html>
