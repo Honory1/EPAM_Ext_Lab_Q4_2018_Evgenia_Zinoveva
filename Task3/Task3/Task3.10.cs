@@ -28,7 +28,7 @@
                 {
                     for (int j = 0; j < Lng2; j++)
                     {
-                        sourceArr[i, j] = rnd.Next(-100, 100);
+                        sourceArr[i, j] = rnd.Next(-100, 100);//todo pn хардкод
 
                         if ((i + j) % 2 == 0)
                         {

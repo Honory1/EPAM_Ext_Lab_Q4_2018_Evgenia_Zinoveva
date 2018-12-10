@@ -24,7 +24,7 @@
                 Random rnd = new Random();
                 for (int i = 0; i < sourceArr.Length; i++)
                 {
-                    sourceArr[i] = rnd.Next(-100, 100);
+                    sourceArr[i] = rnd.Next(-100, 100);//todo pn хардкод
                     if (sourceArr[i] > 0)
                     {
                         sum += sourceArr[i];

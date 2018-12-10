@@ -13,7 +13,7 @@
     {
         public static void RectAreaCalc()
         {
-            Console.WriteLine("Введите стороны прямоугольника a и b через пробел: ");
+            Console.WriteLine("Введите стороны прямоугольника a и b через пробел: ");//todo pn строки - в ресурсы (здесь и везде в решении)
             
             var values = Console.ReadLine().Split();
             int a = int.Parse(values[0]);

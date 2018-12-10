@@ -27,7 +27,7 @@
 
                 for (int j = 1; j < i * 2; j++)
                 {
-                    s.Append('*');
+                    s.Append('*');//todo pn харкод 
                 }
 
                 Console.WriteLine(s.ToString());
@@ -46,7 +46,7 @@
             if (cki.Key == ConsoleKey.D1)
             {
                 Random rnd = new Random();
-                int n = rnd.Next(1, 50);
+                int n = rnd.Next(1, 50);//todo pn харкод 
                 Console.WriteLine("\nСгенерированное число: {0}", n);
                 Drawing(n);
             }

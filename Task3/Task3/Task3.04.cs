@@ -49,7 +49,7 @@
             if (cki.Key == ConsoleKey.D1)
             {
                 Random rnd = new Random();
-                int n = rnd.Next(1, 50);
+                int n = rnd.Next(1, 50);//todo pn харкод у тебя во многих местах дублируется это число. Есть смысл вынести его в конфиг или глобальную константу.
                 Console.WriteLine("\nСгенерированное число: {0}", n);
                 Drawing(n);
             }

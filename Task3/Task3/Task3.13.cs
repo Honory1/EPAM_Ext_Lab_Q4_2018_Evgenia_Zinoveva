@@ -28,7 +28,7 @@
                 sw.Start();
                 for (int j = 0; j < n; j++)
                 {
-                    str += "*";
+                    str += "*";//todo pn хардкод
                 }
 
                 sw.Stop();
@@ -40,7 +40,7 @@
                 var sw1 = Stopwatch.StartNew();
                 for (int j = 0; j < n; j++)
                 {
-                    sb.Append("*");
+                    sb.Append("*");//todo pn хардкод
                 }
 
                 sw.Stop();

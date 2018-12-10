@@ -75,7 +75,7 @@
                 {
                     for (int k = 0; k < Lng3; k++)
                     {
-                        sourceArr[i, j, k] = rnd.Next(-100, 100);
+                        sourceArr[i, j, k] = rnd.Next(-100, 100);//todo pn хардкод
                     }
                 }
             }

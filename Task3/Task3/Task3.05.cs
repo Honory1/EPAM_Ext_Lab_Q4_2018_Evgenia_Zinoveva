@@ -23,7 +23,7 @@
             
             for (int i = 0; i < MaxValue; i++)
             {
-                if (i % FirstNum == 0 || i % SecondNum == 0)
+                if (i % FirstNum == 0 || i % SecondNum == 0)//todo pn не вижу вариативности решения (как его использовать другим разработчикам без копипаста?)
                 {
                     sum += i;
                 }

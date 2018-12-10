@@ -52,37 +52,37 @@
                 cki = Console.ReadKey();
                 if (cki.Key == ConsoleKey.D1)
                 {
-                    if (input[0] == "Bold")
+                    if (input[0] == "Bold")//todo pn в константы
                     {
                         input[0] = string.Empty;
                     }
                     else if (string.IsNullOrWhiteSpace(input[0]))
                     {
-                        input[0] = "Bold";
+                        input[0] = "Bold";//todo pn в константы
                     }
                 }
 
                 if (cki.Key == ConsoleKey.D2)
                 {
-                    if (input[1] == "Italic")
+                    if (input[1] == "Italic")//todo pn в константы
                     {
                         input[1] = string.Empty;
                     }
                     else if (string.IsNullOrWhiteSpace(input[1]))
                     {
-                        input[1] = "Italic";
+                        input[1] = "Italic";//todo pn в константы
                     }
                 }
 
                 if (cki.Key == ConsoleKey.D3)
                 {
-                    if (input[2] == "Underline")
+                    if (input[2] == "Underline")//todo pn в константы
                     {
                         input[2] = string.Empty;
                     }
                     else if (string.IsNullOrWhiteSpace(input[2]))
                     {
-                        input[2] = "Underline";
+                        input[2] = "Underline";//todo pn в константы
                     }
                 }                
             }

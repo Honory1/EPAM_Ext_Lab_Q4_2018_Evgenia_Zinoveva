@@ -23,13 +23,13 @@
 
             while (!success)
             {
-                Console.WriteLine("Ошибка. Введите числовое значение");
+                Console.WriteLine("Ошибка. Введите числовое значение");//todo pn сильная связность (везде где используешь реальный Console, а не собственную реализацию через IConsole).
                 success = int.TryParse(Console.ReadLine(), out taskNumber);
             }
 
             if (success)
             {
-                while ((taskNumber > 13) || (taskNumber < 1))
+                while ((taskNumber > 13) || (taskNumber < 1))//todo pn хардкод (если количество заданий изменится?)
                 {
                     Console.WriteLine("Ошибка. Введите значение от 1 до 13");
                     success = int.TryParse(Console.ReadLine(), out taskNumber);
@@ -229,7 +229,7 @@
         /// <param name="message">error message</param>
         public static void Log(string stackTrace, string message)
         {
-            var writer = new StreamWriter(@"C:\Users\HP\Desktop\Task3\Log1.log", true);
+            var writer = new StreamWriter(@"C:\Users\HP\Desktop\Task3\Log1.log", true);//todo pn абсолютные пути - зло. Используй относительные. Проверяй на существование файла перед чтением и создавай, если его не нашлось. Функциональность по логированию - в отдельный класс
             writer.WriteLine("{0}: {1}\n {2}", DateTime.Now, message, stackTrace);
             writer.Close();
         }

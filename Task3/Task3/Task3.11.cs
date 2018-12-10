@@ -22,7 +22,7 @@
                 }
                 else if (!char.IsLetterOrDigit(input[i]))
                 {
-                    input = input.Replace(input[i], ' ');
+                    input = input.Replace(input[i], ' ');//todo pn хардкод
                 }
             }
 
