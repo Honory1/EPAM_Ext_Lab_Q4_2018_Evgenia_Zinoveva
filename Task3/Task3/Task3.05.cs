@@ -29,7 +29,7 @@
                 }
             }
 
-            Console.WriteLine("Сумма всех чисел меньше {0}, кратных {1} или {2}: {3}", MaxValue, FirstNum, SecondNum, sum);
+            Console.WriteLine("Sum of all numbers less than {0}, multiple of {1} or {2}: {3}", MaxValue, FirstNum, SecondNum, sum);
         }
     }
 }

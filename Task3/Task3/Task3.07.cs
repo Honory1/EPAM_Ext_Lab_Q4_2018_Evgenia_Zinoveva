@@ -24,7 +24,7 @@
                 sourceArr[i] = rnd.Next(-100, 100);
             }
 
-            Console.WriteLine("Сгенерированный массив:");
+            Console.WriteLine("Generated array:");
             foreach (var e in sourceArr)
             {
                 Console.Write("{0} ", e);
@@ -40,14 +40,14 @@
                 }
             }
 
-            Console.WriteLine("\nОтсортированный массив:");
+            Console.WriteLine("\nSorted array:");
             foreach (var e in sourceArr)
             {
                 Console.Write("{0} ", e);
             }
 
-            Console.WriteLine("\nМинимальный элемент: {0}", sourceArr[0]);
-            Console.WriteLine("Максимальный элемент: {0}", sourceArr[sourceArr.Length - 1]);
+            Console.WriteLine("\nMinimum item: {0}", sourceArr[0]);
+            Console.WriteLine("Maximum item: {0}", sourceArr[sourceArr.Length - 1]);
         }
     }
 }

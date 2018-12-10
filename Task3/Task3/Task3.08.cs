@@ -49,7 +49,7 @@
 
         public static void OutputArr(int[,,] sourceArr)
         {
-            Console.WriteLine("Полученный массив:");
+            Console.WriteLine("Received array:");
             for (int i = 0; i < Lng1; i++)
             {
                 for (int j = 0; j < Lng2; j++)
@@ -85,14 +85,14 @@
         {
             int[,,] sourceArr = new int[Lng1, Lng2, Lng3];
 
-            Console.WriteLine("Для генерирования массива нажмите 1, для ручного заполнения нажмите 2");
+            Console.WriteLine("To generate an array, press '1', to enter, press '2': ");
             ConsoleKeyInfo cki = Console.ReadKey();
 
             if (cki.Key == ConsoleKey.D1)
             {
                 ArrGeneration(sourceArr);
 
-                Console.WriteLine("\nСгенерированный массив:");
+                Console.WriteLine("\nGenerated array:");
                 for (int i = 0; i < Lng1; i++)
                 {
                     for (int j = 0; j < Lng2; j++)
@@ -113,7 +113,7 @@
             }
             else if (cki.Key == ConsoleKey.D2)
             {
-                Console.WriteLine("\nВведите {0} строк по {1} символа через пробел:", Lng1 * Lng2, Lng3);
+                Console.WriteLine("\nEnter {0} lines of {1} space separated characters:", Lng1 * Lng2, Lng3);
 
                 for (int i = 0; i < Lng1; i++)
                 {

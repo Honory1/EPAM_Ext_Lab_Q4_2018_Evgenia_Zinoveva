@@ -34,24 +34,24 @@
 
         public static void DoubleCharacters()
         {
-            Console.WriteLine("Для использования строки по умолчанию нажмите 1, для ввода нажмите 2: ");
+            Console.WriteLine("To use the default string, press key '1', to enter press key '2': ");
             ConsoleKeyInfo cki = Console.ReadKey();
 
             if (cki.Key == ConsoleKey.D1)
             {
-                string firstInput = "написать программу, которая";
-                string secondInput = "описание";
+                string firstInput = "write a program that";
+                string secondInput = "description";
 
-                Console.WriteLine("Результирующая строка: {0}", Doubling(firstInput, secondInput));
+                Console.WriteLine("Result string: {0}", Doubling(firstInput, secondInput));
             }
             else if (cki.Key == ConsoleKey.D2)
             {
-                Console.WriteLine("\nВведите первую строку:");
+                Console.WriteLine("\nEnter the first line:");
                 string firstInput = Console.ReadLine();
-                Console.WriteLine("Введите вторую строку:");
+                Console.WriteLine("Enter the second line:");
                 string secondInput = Console.ReadLine();
 
-                Console.WriteLine("Результирующая строка: {0}", Doubling(firstInput, secondInput));
+                Console.WriteLine("Result string: {0}", Doubling(firstInput, secondInput));
             }
         }
     }

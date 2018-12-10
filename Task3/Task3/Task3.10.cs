@@ -18,7 +18,7 @@
             int sum = 0;
             int[,] sourceArr = new int[Lng1, Lng2];
 
-            Console.WriteLine("Для генерирования массива нажмите 1, для ввода нажмите 2: ");
+            Console.WriteLine("To generate an array, press '1', to enter, press '2': ");
             ConsoleKeyInfo cki = Console.ReadKey();
 
             if (cki.Key == ConsoleKey.D1)
@@ -37,7 +37,7 @@
                     } 
                 }
 
-                Console.WriteLine("\nСгенерированный массив:");
+                Console.WriteLine("\nGenerated array:");
                 for (int i = 0; i < Lng1; i++)
                 {
                     for (int j = 0; j < Lng2; j++)
@@ -48,11 +48,11 @@
                     Console.WriteLine();
                 }
 
-                Console.WriteLine("Сумма элементов, стоящих на четных позициях: {0}", sum);
+                Console.WriteLine("The sum of items standing in even positions: {0}", sum);
             }
             else if (cki.Key == ConsoleKey.D2)
             {
-                Console.WriteLine("\nВведите {0} строк по {1} чисел:", Lng1, Lng2);
+                Console.WriteLine("\nEnter {0} rows of {1} numbers:", Lng1, Lng2);
                 for (int i = 0; i < Lng1; i++)
                 {
                     string input = Console.ReadLine();
@@ -68,7 +68,7 @@
                     }
                 }
 
-                Console.WriteLine("Сумма элементов, стоящих на четных позициях: {0}", sum);
+                Console.WriteLine("The sum of items standing in even positions: {0}", sum);
             }
         }
     }

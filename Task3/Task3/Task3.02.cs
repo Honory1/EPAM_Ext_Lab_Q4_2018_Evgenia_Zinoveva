@@ -16,14 +16,14 @@
         /// </summary>
         public static void DrawImg()
         {
-            Console.WriteLine("Для генерирования числа нажмите 1, для ввода числа нажмите 2: ");
+            Console.WriteLine("To generate a number, press key '1', to enter a number, press key '2': ");
             ConsoleKeyInfo cki = Console.ReadKey();
 
             if (cki.Key == ConsoleKey.D1)
             {
                 Random rnd = new Random();
                 int n = rnd.Next(1, 50);
-                Console.WriteLine("\nСгенерированное число: {0}", n);
+                Console.WriteLine("\nGenerated number: {0}", n);
                 StringBuilder s = new StringBuilder();
                 for (int i = 0; i < n; i++)
                 {
@@ -33,12 +33,12 @@
             }
             else if (cki.Key == ConsoleKey.D2)
             {
-                Console.WriteLine("\nВведите число N: ");
+                Console.WriteLine("\nEnter the number N: ");
                 bool succes = int.TryParse(Console.ReadLine(), out int n);
 
                 while (!succes)
                 {
-                    Console.WriteLine("Ошибка. Введите числовое значение: ");
+                    Console.WriteLine("Error. Please enter a numeric value: ");
                     succes = int.TryParse(Console.ReadLine(), out n);
                 }
 

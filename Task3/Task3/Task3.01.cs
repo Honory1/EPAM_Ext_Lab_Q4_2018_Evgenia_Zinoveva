@@ -13,7 +13,7 @@
     {
         public static void RectAreaCalc()
         {
-            Console.WriteLine("Введите стороны прямоугольника a и b через пробел: ");
+            Console.WriteLine("Enter the sides of the rectangle A and B through the gap: ");
             
             var values = Console.ReadLine().Split();
             int a = int.Parse(values[0]);
@@ -21,7 +21,7 @@
 
             while (a <= 0 || b <= 0)
             {
-                Console.WriteLine("Ошибка. Введите значение больше 0: ");
+                Console.WriteLine("Error. Please enter a value greater than 0: ");
                 values = Console.ReadLine().Split();
                 a = int.Parse(values[0]);
                 b = int.Parse(values[1]);
@@ -29,7 +29,7 @@
 
             if (a > 0 && b > 0)
             {
-                Console.WriteLine("Площадь прямоугольника: {0}", a * b);
+                Console.WriteLine("Rectangle area: {0}", a * b);
             }
         }
     }

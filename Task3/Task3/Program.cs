@@ -7,23 +7,15 @@
     using System.Text;
     using System.Threading.Tasks;  
 
-    /// <summary>
-    ///general Program
-    /// </summary>
     public class Program 
     {
-        /// <summary>
-        /// Input Check
-        /// </summary>
-        /// <param name="input">input</param>
-        /// <returns>string</returns>
         public static int InputCheck(string input)
         {
             bool success = int.TryParse(input, out int taskNumber);
 
             while (!success)
             {
-                Console.WriteLine("Ошибка. Введите числовое значение");
+                Console.WriteLine("Error. Please enter a numeric value:");
                 success = int.TryParse(Console.ReadLine(), out taskNumber);
             }
 
@@ -31,12 +23,12 @@
             {
                 while ((taskNumber > 13) || (taskNumber < 1))
                 {
-                    Console.WriteLine("Ошибка. Введите значение от 1 до 13");
+                    Console.WriteLine("Error. Please enter a value from 1 to 13:");
                     success = int.TryParse(Console.ReadLine(), out taskNumber);
 
                     while (!success)
                     {
-                        Console.WriteLine("Ошибка. Введите числовое значение");
+                        Console.WriteLine("Error. Please enter a numeric value:");
                         success = int.TryParse(Console.ReadLine(), out taskNumber);
                     }
                 }
@@ -45,23 +37,18 @@
             return taskNumber;
         }
 
-        /// <summary>
-        /// Select of the next action
-        /// </summary>
         public static void SelectOfTheNextAction()
         {
-            Console.WriteLine("\nSpace - для повтора задания " +
-                "\nEnter - для выбора другого задания" +
-                "\nEsc - для выхода из приложения");
+            Console.WriteLine("\nPress the key 'Space' to repeat the task " +
+                "\nPress the key 'Enter' to select another task" +
+                "\nPress the key 'Esc' to exit the application");
         }
-
-        /// <summary>
-        /// Task selection
-        /// </summary>
-        /// <param name="taskNumber">task number</param>
-        public static void TaskSelection(int taskNumber)
+        
+        public static void TaskSelection()
         {
             ConsoleKeyInfo cki;
+            Console.WriteLine("Enter the task number from 1 to 13: ");
+            int taskNumber = InputCheck(Console.ReadLine());
             switch (taskNumber)
             {
                 case 1:
@@ -71,6 +58,10 @@
                             Task1.RectAreaCalc();
                             SelectOfTheNextAction();
                             cki = Console.ReadKey();
+                            if (cki.Key == ConsoleKey.Enter)
+                            {
+                                TaskSelection();
+                            }
                         }
                         while (cki.Key == ConsoleKey.Spacebar);
                         break;
@@ -83,6 +74,10 @@
                             Task2.DrawImg();
                             SelectOfTheNextAction();
                             cki = Console.ReadKey();
+                            if (cki.Key == ConsoleKey.Enter)
+                            {
+                                TaskSelection();
+                            }
                         }
                         while (cki.Key == ConsoleKey.Spacebar);
                         break;
@@ -95,6 +90,10 @@
                             Task3.DrawImg();
                             SelectOfTheNextAction();
                             cki = Console.ReadKey();
+                            if (cki.Key == ConsoleKey.Enter)
+                            {
+                                TaskSelection();
+                            }
                         }
                         while (cki.Key == ConsoleKey.Spacebar);
                         break;
@@ -107,6 +106,10 @@
                             Task4.DrawImg();
                             SelectOfTheNextAction();
                             cki = Console.ReadKey();
+                            if (cki.Key == ConsoleKey.Enter)
+                            {
+                                TaskSelection();
+                            }
                         }
                         while (cki.Key == ConsoleKey.Spacebar);
                         break;
@@ -119,6 +122,10 @@
                             Task5.CalcTheSum();
                             SelectOfTheNextAction();
                             cki = Console.ReadKey();
+                            if (cki.Key == ConsoleKey.Enter)
+                            {
+                                TaskSelection();
+                            }
                         }
                         while (cki.Key == ConsoleKey.Spacebar);
                         break;
@@ -131,6 +138,10 @@
                             Task6.TextLabelSelect();
                             SelectOfTheNextAction();
                             cki = Console.ReadKey();
+                            if (cki.Key == ConsoleKey.Enter)
+                            {
+                                TaskSelection();
+                            }
                         }
                         while (cki.Key == ConsoleKey.Spacebar);
                         break;
@@ -143,6 +154,10 @@
                             Task7.SortArr();
                             SelectOfTheNextAction();
                             cki = Console.ReadKey();
+                            if (cki.Key == ConsoleKey.Enter)
+                            {
+                                TaskSelection();
+                            }
                         }
                         while (cki.Key == ConsoleKey.Spacebar);
                         break;
@@ -155,6 +170,10 @@
                             Task8.SortArr();
                             SelectOfTheNextAction();
                             cki = Console.ReadKey();
+                            if (cki.Key == ConsoleKey.Enter)
+                            {
+                                TaskSelection();
+                            }
                         }
                         while (cki.Key == ConsoleKey.Spacebar);
                         break;
@@ -167,6 +186,10 @@
                             Task9.CalcSumElement();
                             SelectOfTheNextAction();
                             cki = Console.ReadKey();
+                            if (cki.Key == ConsoleKey.Enter)
+                            {
+                                TaskSelection();
+                            }
                         }
                         while (cki.Key == ConsoleKey.Spacebar);
                         break;
@@ -179,6 +202,10 @@
                             Task10.CalcTheSumOfEvenElements();
                             SelectOfTheNextAction();
                             cki = Console.ReadKey();
+                            if (cki.Key == ConsoleKey.Enter)
+                            {
+                                TaskSelection();
+                            }
                         }
                         while (cki.Key == ConsoleKey.Spacebar);
                         break;
@@ -191,6 +218,10 @@
                             Task11.DetermineAverageWordLength();
                             SelectOfTheNextAction();
                             cki = Console.ReadKey();
+                            if (cki.Key == ConsoleKey.Enter)
+                            {
+                                TaskSelection();
+                            }
                         }
                         while (cki.Key == ConsoleKey.Spacebar);
                         break;
@@ -203,6 +234,10 @@
                             Task12.DoubleCharacters();
                             SelectOfTheNextAction();
                             cki = Console.ReadKey();
+                            if (cki.Key == ConsoleKey.Enter)
+                            {
+                                TaskSelection();
+                            }
                         }
                         while (cki.Key == ConsoleKey.Spacebar);
                         break;
@@ -215,29 +250,30 @@
                             Task13.ComparativeAnalysis();
                             SelectOfTheNextAction();
                             cki = Console.ReadKey();
+                            if (cki.Key == ConsoleKey.Enter)
+                            {
+                                TaskSelection();
+                            }
                         }
                         while (cki.Key == ConsoleKey.Spacebar);
                         break;
                     }
             }
         }
-
-        /// <summary>
-        /// write log
-        /// </summary>
-        /// <param name="stackTrace">stack trace</param>
-        /// <param name="message">error message</param>
-        public static void Log(string stackTrace, string message)
+        
+        public static void Log(Exception ex)
         {
-            var writer = new StreamWriter(@"C:\Users\HP\Desktop\Task3\Log1.log", true);
-            writer.WriteLine("{0}: {1}\n {2}", DateTime.Now, message, stackTrace);
+            string pathToLog = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Log");
+            if (!Directory.Exists(pathToLog))
+            {
+                Directory.CreateDirectory(pathToLog);
+            }
+
+            var writer = new StreamWriter("log/Log1.log", true);
+            writer.WriteLine("{0}: {1}\n {2}", DateTime.Now, ex.Message, ex.StackTrace);
             writer.Close();
         }
-
-        /// <summary>
-        /// general method
-        /// </summary>
-        /// <param name="args">arg</param>
+        
         public static void Main(string[] args)
         {
             ConsoleKeyInfo cki;
@@ -245,18 +281,15 @@
             {               
                 do
                 {
-                    Console.WriteLine("Введите номер задания от 1 до 13: ");
-                    int taskNumber = InputCheck(Console.ReadLine());
-
-                    TaskSelection(taskNumber);
+                    TaskSelection();
                     cki = Console.ReadKey();
                 }
-                while (cki.Key == ConsoleKey.Enter);
+                while (cki.Key == ConsoleKey.Escape);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Извините, произошла ошибка");
-                Log(ex.StackTrace, ex.Message);
+                Console.WriteLine("Sorry, an error occurred.");
+                Log(ex);
                 throw;
             }
         }

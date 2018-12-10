@@ -49,27 +49,27 @@
         {
             string sourceStr = "Abc.bn    ////ii ";
  
-            Console.WriteLine("Для использования строки по умолчанию нажмите 1, для ввода нажмите 2: ");
+            Console.WriteLine("To use the default string, press key '1', to enter press key '2': ");
             ConsoleKeyInfo cki = Console.ReadKey();
 
             if (cki.Key == ConsoleKey.D1)
             {
-                Console.WriteLine("\nСтрока по умолчанию: {0}", sourceStr);
+                Console.WriteLine("\nDefault string: {0}", sourceStr);
 
                 int countLet = CountTheNumberOfLetters(ref sourceStr);
                 int countWord = CountTheNumberOfWords(ref sourceStr);
 
-                Console.WriteLine("Средняя длина слова: {0}", (double)countLet / countWord);
+                Console.WriteLine("Average word length: {0}", (double)countLet / countWord);
             }
             else if (cki.Key == ConsoleKey.D2)
             {
-                Console.WriteLine("\nВведите строку:");
+                Console.WriteLine("\nEnter the string:");
                 string input = Console.ReadLine();
 
                 int countLet = CountTheNumberOfLetters(ref input);
                 int countWord = CountTheNumberOfWords(ref input);
                                 
-                Console.WriteLine("Средняя длина слова: {0}", (double)countLet / countWord);
+                Console.WriteLine("Average word length: {0}", (double)countLet / countWord);
             }
         }
     }

@@ -16,7 +16,7 @@
         /// </summary>
         public static void TextLabelSelect()
         {
-            Console.WriteLine("Для выхода из задания нажмите Esc");
+            Console.WriteLine("To exit the task, press kye 'Esc'");
             int lng = 3;
             string[] input = new string[lng];
             bool flg = true;
@@ -25,7 +25,7 @@
             do
             {
                 string output = string.Empty;
-                Console.Write("\nПараметры надписи: ");
+                Console.Write("\nInscription parameters: ");
                 foreach (var e in input)
                 {
                     if (!string.IsNullOrWhiteSpace(e))
@@ -48,7 +48,7 @@
 
                 flg = true;
 
-                Console.WriteLine("\nВведите:\n\t1:bold\n\t2:italic\n\t3:underline");
+                Console.WriteLine("\nEnter:\n\t1:bold\n\t2:italic\n\t3:underline");
                 cki = Console.ReadKey();
                 if (cki.Key == ConsoleKey.D1)
                 {
