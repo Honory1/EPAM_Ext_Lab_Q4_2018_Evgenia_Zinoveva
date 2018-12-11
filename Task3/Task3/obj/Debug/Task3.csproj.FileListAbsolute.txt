@@ -19,3 +19,5 @@ C:\Users\HP\Desktop\EPAM_Ext_Lab_Q4_2018_Evgenia_Zinoveva\Task3\Task3\obj\Debug\
 C:\Users\HP\Desktop\EPAM_Ext_Lab_Q4_2018_Evgenia_Zinoveva\Task3\Task3\obj\Debug\Task3.csproj.CoreCompileInputs.cache
 C:\Users\HP\Desktop\EPAM_Ext_Lab_Q4_2018_Evgenia_Zinoveva\Task3\Task3\obj\Debug\Task3.exe
 C:\Users\HP\Desktop\EPAM_Ext_Lab_Q4_2018_Evgenia_Zinoveva\Task3\Task3\obj\Debug\Task3.pdb
+C:\Users\HP\Desktop\EPAM_Ext_Lab_Q4_2018_Evgenia_Zinoveva\Task3\Task3\obj\Debug\Task3.Resource1.resources
+C:\Users\HP\Desktop\EPAM_Ext_Lab_Q4_2018_Evgenia_Zinoveva\Task3\Task3\obj\Debug\Task3.csproj.GenerateResource.cache

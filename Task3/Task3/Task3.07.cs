@@ -6,25 +6,21 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    /// <summary>
-    /// Task 7
-    /// </summary>
     public class Task7
     {
-        /// <summary>
-        /// Sort array
-        /// </summary>
         public static void SortArr()
         {
+            const int MinRangeValue = -100;
+            const int MaxRangeValue = 100;
             int[] sourceArr = new int[15];
 
             Random rnd = new Random();
             for (int i = 0; i < sourceArr.Length; i++)
             {
-                sourceArr[i] = rnd.Next(-100, 100);
+                sourceArr[i] = rnd.Next(MinRangeValue, MaxRangeValue);
             }
 
-            Console.WriteLine("Generated array:");
+            Console.WriteLine(Resource1.OutputGeneratedValue);
             foreach (var e in sourceArr)
             {
                 Console.Write("{0} ", e);

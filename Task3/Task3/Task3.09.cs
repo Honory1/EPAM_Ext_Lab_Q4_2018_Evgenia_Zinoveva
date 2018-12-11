@@ -6,17 +6,16 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    /// <summary>
-    /// Task 9
-    /// </summary>
     public class Task9
     {
         public static void CalcSumElement()
         {
+            const int MinRangeValue = -100;
+            const int MaxRangeValue = 100;
             const int Lng = 10;
             int sum = 0;
             int[] sourceArr = new int[Lng];
-            Console.WriteLine("To generate an array, press '1', to enter, press '2': ");
+            Console.WriteLine(Resource1.InputSelection);
             ConsoleKeyInfo cki = Console.ReadKey();
 
             if (cki.Key == ConsoleKey.D1)
@@ -24,20 +23,20 @@
                 Random rnd = new Random();
                 for (int i = 0; i < sourceArr.Length; i++)
                 {
-                    sourceArr[i] = rnd.Next(-100, 100);
+                    sourceArr[i] = rnd.Next(MinRangeValue, MaxRangeValue);
                     if (sourceArr[i] > 0)
                     {
                         sum += sourceArr[i];
                     }
                 }
 
-                Console.WriteLine("\nGenerated array:");
+                Console.WriteLine("\n", Resource1.OutputGeneratedValue);
                 foreach (var e in sourceArr)
                 {
                     Console.Write("{0} ", e);
                 }
 
-                Console.WriteLine("\nSum of non-negative elements: {0}", sum);
+                Console.WriteLine("\n{0} {1}", Resource1.OutputTask9, sum);
             }
             else if (cki.Key == ConsoleKey.D2)
             {
@@ -52,7 +51,7 @@
                     }
                 }
 
-                Console.WriteLine("Sum of non-negative elements: {0}", sum);
+                Console.WriteLine("{0} {1}", Resource1.OutputTask9, sum);
             }
         }
     }

@@ -6,70 +6,56 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    /// <summary>
-    /// Task 11
-    /// </summary>
     public class Task11
     {
-        public static int CountTheNumberOfLetters(ref string input)
+        public static double CountTheNumber(ref string input)
         {
             int countChar = 0;
+            int countWord = 0;
+            bool flg = false;
+            
             for (int i = 0; i < input.Length; i++)
             {
                 if (char.IsLetterOrDigit(input[i]))
                 {
                     countChar++;
+                    flg = true;
                 }
-                else if (!char.IsLetterOrDigit(input[i]))
-                {
-                    input = input.Replace(input[i], ' ');
-                }
-            }
-
-            return countChar;
-        }
-
-        public static int CountTheNumberOfWords(ref string input)
-        {
-            int countWord = 0;
-            var strArr = input.Split();
-
-            for (int i = 0; i < strArr.Length; i++)
-            {
-                if (!string.IsNullOrWhiteSpace(strArr[i]))
+                else if (!char.IsLetterOrDigit(input[i]) && flg)
                 {
                     countWord++;
+                    flg = false;
                 }
             }
 
-            return countWord;
+            var output = (double)countChar / countWord;
+
+            return output;
         }
 
         public static void DetermineAverageWordLength()
         {
             string sourceStr = "Abc.bn    ////ii ";
  
-            Console.WriteLine("To use the default string, press key '1', to enter press key '2': ");
+            Console.WriteLine(Resource1.InputSelection);
             ConsoleKeyInfo cki = Console.ReadKey();
 
             if (cki.Key == ConsoleKey.D1)
             {
-                Console.WriteLine("\nDefault string: {0}", sourceStr);
+                Console.WriteLine("\n{0} {1}", Resource1.OutputGeneratedValue, sourceStr);
 
-                int countLet = CountTheNumberOfLetters(ref sourceStr);
-                int countWord = CountTheNumberOfWords(ref sourceStr);
+                var countLet = CountTheNumber(ref sourceStr);
 
-                Console.WriteLine("Average word length: {0}", (double)countLet / countWord);
+                Console.WriteLine("{0} {1}", Resource1.OutputTask11, countLet);
             }
             else if (cki.Key == ConsoleKey.D2)
             {
-                Console.WriteLine("\nEnter the string:");
+                Console.WriteLine("\n{0}", Resource1.InputTask11);
                 string input = Console.ReadLine();
 
-                int countLet = CountTheNumberOfLetters(ref input);
-                int countWord = CountTheNumberOfWords(ref input);
+                var countLet = CountTheNumber(ref input);
                                 
-                Console.WriteLine("Average word length: {0}", (double)countLet / countWord);
+                Console.WriteLine("{0} {1}", Resource1.OutputTask11, countLet);
             }
         }
     }

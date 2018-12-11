@@ -6,30 +6,33 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    /// <summary>
-    /// Task 5
-    /// </summary>
     public class Task5
     {
-        /// <summary>
-        /// Calc the sum
-        /// </summary>
         public static void CalcTheSum()
         {
-            const int FirstNum = 3;
-            const int SecondNum = 5;
-            const int MaxValue = 1000;
             int sum = 0;
-            
-            for (int i = 0; i < MaxValue; i++)
+            int maxValue = 0;
+            int firstNum = 0;
+            int secondNum = 0;
+            Console.WriteLine("Enter first number: ");
+            var resultParceX = int.TryParse(Console.ReadLine(), out firstNum);
+            Console.WriteLine("Enter second number: ");
+            var resultParceY = int.TryParse(Console.ReadLine(), out secondNum);
+            Console.WriteLine("Enter maximum value: ");
+            var resultParceMax = int.TryParse(Console.ReadLine(), out maxValue);
+
+            if (resultParceX && resultParceY)
             {
-                if (i % FirstNum == 0 || i % SecondNum == 0)
+                for (int i = 0; i < maxValue; i++)
                 {
-                    sum += i;
+                    if (i % firstNum == 0 || i % secondNum == 0)
+                    {
+                        sum += i;
+                    }
                 }
             }
 
-            Console.WriteLine("Sum of all numbers less than {0}, multiple of {1} or {2}: {3}", MaxValue, FirstNum, SecondNum, sum);
+            Console.WriteLine("Sum of all numbers less than {0}, multiple of {1} or {2}: {3}", maxValue, firstNum, secondNum, sum);
         }
     }
 }

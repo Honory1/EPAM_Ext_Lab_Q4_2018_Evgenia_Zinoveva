@@ -6,19 +6,18 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    /// <summary>
-    /// Task 10
-    /// </summary>
     public class Task10
     {
         public static void CalcTheSumOfEvenElements()
         {
+            const int MinRangeValue = -100;
+            const int MaxRangeValue = 100;
             const int Lng1 = 4;
             const int Lng2 = 3;
             int sum = 0;
             int[,] sourceArr = new int[Lng1, Lng2];
 
-            Console.WriteLine("To generate an array, press '1', to enter, press '2': ");
+            Console.WriteLine(Resource1.InputSelection);
             ConsoleKeyInfo cki = Console.ReadKey();
 
             if (cki.Key == ConsoleKey.D1)
@@ -28,7 +27,7 @@
                 {
                     for (int j = 0; j < Lng2; j++)
                     {
-                        sourceArr[i, j] = rnd.Next(-100, 100);
+                        sourceArr[i, j] = rnd.Next(MinRangeValue, MaxRangeValue);
 
                         if ((i + j) % 2 == 0)
                         {
@@ -37,7 +36,7 @@
                     } 
                 }
 
-                Console.WriteLine("\nGenerated array:");
+                Console.WriteLine("\n{0}", Resource1.OutputGeneratedValue);
                 for (int i = 0; i < Lng1; i++)
                 {
                     for (int j = 0; j < Lng2; j++)
@@ -48,7 +47,7 @@
                     Console.WriteLine();
                 }
 
-                Console.WriteLine("The sum of items standing in even positions: {0}", sum);
+                Console.WriteLine("{0} {1}", Resource1.OutputTask10, sum);
             }
             else if (cki.Key == ConsoleKey.D2)
             {
@@ -68,7 +67,7 @@
                     }
                 }
 
-                Console.WriteLine("The sum of items standing in even positions: {0}", sum);
+                Console.WriteLine("{0} {1}", Resource1.OutputTask10, sum);
             }
         }
     }

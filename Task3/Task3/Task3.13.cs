@@ -7,9 +7,6 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    /// <summary>
-    /// Task 13
-    /// </summary>
     public class Task13
     {
         public static void ComparativeAnalysis()
@@ -28,7 +25,7 @@
                 sw.Start();
                 for (int j = 0; j < n; j++)
                 {
-                    str += "*";
+                    str += Resource1.DefaultCharacter;
                 }
 
                 sw.Stop();
@@ -40,7 +37,7 @@
                 var sw1 = Stopwatch.StartNew();
                 for (int j = 0; j < n; j++)
                 {
-                    sb.Append("*");
+                    sb.Append(Resource1.DefaultCharacter);
                 }
 
                 sw.Stop();

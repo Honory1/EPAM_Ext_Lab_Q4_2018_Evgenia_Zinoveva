@@ -6,30 +6,12 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    /// <summary>
-    /// Task 8
-    /// </summary>
     public class Task8
     {
-        /// <summary>
-        /// length 1
-        /// </summary>
         public const int Lng1 = 2; 
-
-        /// <summary>
-        /// length 2
-        /// </summary>
         public const int Lng2 = 3;
-
-        /// <summary>
-        /// length 3
-        /// </summary>
         public const int Lng3 = 4;
 
-        /// <summary>
-        /// Change array
-        /// </summary>
-        /// <param name="sourceArr">source array</param>
         public static void ChangeArr(int[,,] sourceArr)
         {
             for (int i = 0; i < Lng1; i++)
@@ -68,6 +50,8 @@
 
         public static void ArrGeneration(int[,,] sourceArr)
         {
+            const int MinRangeValue = -100;
+            const int MaxRangeValue = 100;
             Random rnd = new Random();
             for (int i = 0; i < Lng1; i++)
             {
@@ -75,7 +59,7 @@
                 {
                     for (int k = 0; k < Lng3; k++)
                     {
-                        sourceArr[i, j, k] = rnd.Next(-100, 100);
+                        sourceArr[i, j, k] = rnd.Next(MinRangeValue, MaxRangeValue);
                     }
                 }
             }
@@ -85,14 +69,14 @@
         {
             int[,,] sourceArr = new int[Lng1, Lng2, Lng3];
 
-            Console.WriteLine("To generate an array, press '1', to enter, press '2': ");
+            Console.WriteLine(Resource1.InputSelection);
             ConsoleKeyInfo cki = Console.ReadKey();
 
             if (cki.Key == ConsoleKey.D1)
             {
                 ArrGeneration(sourceArr);
 
-                Console.WriteLine("\nGenerated array:");
+                Console.WriteLine("\n{0}", Resource1.OutputGeneratedValue);
                 for (int i = 0; i < Lng1; i++)
                 {
                     for (int j = 0; j < Lng2; j++)

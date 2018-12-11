@@ -22,12 +22,12 @@
             if (cki.Key == ConsoleKey.D1)
             {
                 Random rnd = new Random();
-                int n = rnd.Next(1, 50);
+                int n = rnd.Next(1, 50);//todo pn харкод 
                 Console.WriteLine("\nGenerated number: {0}", n);
                 StringBuilder s = new StringBuilder();
                 for (int i = 0; i < n; i++)
                 {
-                    s.Append('*');
+                    s.Append('*');//todo pn харкод 
                     Console.WriteLine(s.ToString());
                 }
             }
@@ -47,7 +47,7 @@
                     StringBuilder s = new StringBuilder();
                     for (int i = 0; i < n; i++)
                     {
-                        s.Append('*');
+                        s.Append('*');//todo pn харкод 
                         Console.WriteLine(s.ToString());
                     }
                 }

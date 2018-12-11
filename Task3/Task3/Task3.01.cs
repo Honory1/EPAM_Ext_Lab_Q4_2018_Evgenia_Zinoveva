@@ -13,8 +13,7 @@
     {
         public static void RectAreaCalc()
         {
-            Console.WriteLine("Enter the sides of the rectangle A and B through the gap: ");
-            
+            Console.WriteLine("Введите стороны прямоугольника a и b через пробел: ");            
             var values = Console.ReadLine().Split();
             int a = int.Parse(values[0]);
             int b = int.Parse(values[1]);

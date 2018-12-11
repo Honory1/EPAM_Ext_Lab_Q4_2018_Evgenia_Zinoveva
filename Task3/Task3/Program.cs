@@ -15,13 +15,12 @@
 
             while (!success)
             {
-                Console.WriteLine("Error. Please enter a numeric value:");
-                success = int.TryParse(Console.ReadLine(), out taskNumber);
+                Console.WriteLine("Ошибка. Введите числовое значение");                success = int.TryParse(Console.ReadLine(), out taskNumber);
             }
 
             if (success)
             {
-                while ((taskNumber > 13) || (taskNumber < 1))
+                while ((taskNumber > 13) || (taskNumber < 1))//todo pn хардкод (если количество заданий изменится?)
                 {
                     Console.WriteLine("Error. Please enter a value from 1 to 13:");
                     success = int.TryParse(Console.ReadLine(), out taskNumber);
@@ -269,9 +268,7 @@
                 Directory.CreateDirectory(pathToLog);
             }
 
-            var writer = new StreamWriter("log/Log1.log", true);
-            writer.WriteLine("{0}: {1}\n {2}", DateTime.Now, ex.Message, ex.StackTrace);
-            writer.Close();
+            writer.WriteLine("{0}: {1}\n {2}", DateTime.Now, message, stackTrace);            writer.Close();
         }
         
         public static void Main(string[] args)
