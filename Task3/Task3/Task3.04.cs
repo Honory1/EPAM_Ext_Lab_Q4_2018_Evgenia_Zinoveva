@@ -6,15 +6,8 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    /// <summary>
-    /// Task 4
-    /// </summary>
     public class Task4
     {
-        /// <summary>
-        /// Drawing image
-        /// </summary>
-        /// <param name="n">n</param>
         public static void Drawing(int n)
         {
             StringBuilder s = new StringBuilder();
@@ -29,7 +22,7 @@
 
                     for (int k = 1; k < j * 2; k++)
                     {
-                        s.Append('*');
+                        s.Append(Resource1.DefaultCharacter);
                     }
 
                     Console.WriteLine(s.ToString());
@@ -37,30 +30,30 @@
                 }
             }
         }
-
-        /// <summary>
-        /// Drawing image
-        /// </summary>
+        
         public static void DrawImg()
         {
-            Console.WriteLine("To generate a number, press key '1', to enter a number, press key '2': ");
+            const int MinValue = 1;
+            const int MaxValue = 50;
+
+            Console.WriteLine(Resource1.InputSelection);
             ConsoleKeyInfo cki = Console.ReadKey();
 
             if (cki.Key == ConsoleKey.D1)
             {
                 Random rnd = new Random();
-                int n = rnd.Next(1, 50);//todo pn харкод у тебя во многих местах дублируется это число. Есть смысл вынести его в конфиг или глобальную константу.
-                Console.WriteLine("\nGenerated number: {0}", n);
+                int n = rnd.Next(MinValue, MaxValue);
+                Console.WriteLine("\n{0} {1}", Resource1.OutputGeneratedValue, n);
                 Drawing(n);
             }
             else if (cki.Key == ConsoleKey.D2)
             {
-                Console.WriteLine("\nEnter the number N: ");
+                Console.WriteLine("\n{0}", Resource1.InputNumber);
                 bool succes = int.TryParse(Console.ReadLine(), out int n);
 
                 while (!succes)
                 {
-                    Console.WriteLine("Error. Please enter a numeric value: ");
+                    Console.WriteLine(Resource1.InputError);
 
                     succes = int.TryParse(Console.ReadLine(), out n);
                 }
