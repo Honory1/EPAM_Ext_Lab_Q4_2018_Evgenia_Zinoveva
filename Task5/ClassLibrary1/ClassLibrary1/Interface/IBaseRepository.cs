@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    public class Class1: IBaseRepository<Class1>
+    interface IBaseRepository<T> where T : class, new()
     {
         T Get(int id);
 

@@ -1,9 +1,13 @@
 body {
-	background-image: url('C:/Users/HP/Desktop/html/Images/back.png');
+	background-image: url('../Images/back.png');
 	background-size: 100%;
 	margin:0;
 	padding:0;
 	border:solid 2px #E6E6FA;
+}
+
+head {
+	<link type="image/gif" rel="shortcut icon" href="/Images/cmr.gif" />	
 }
 
 header{ 	

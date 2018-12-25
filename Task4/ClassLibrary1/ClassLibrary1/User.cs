@@ -5,10 +5,12 @@ using System.Text;
 
 namespace ClassLibrary1
 {
-    public class User : UsersList
+    public class User
     {
-        private int Name;
-        private int ID;
+        private int name;
+        private int id;
+        private int email;
+        private int role;
 
         public UsersRoles UsersRoles
         {
@@ -19,6 +21,21 @@ namespace ClassLibrary1
         }
 
         public void PersonalDataEditing()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Login()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Registration()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Get()
         {
             throw new System.NotImplementedException();
         }

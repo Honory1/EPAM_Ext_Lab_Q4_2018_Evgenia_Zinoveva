@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ClassLibrary1
 {
-    internal class Administration : User
+    internal class Administrator : User
     {
         /// <value></value>
         public UsersRoles UsersRoles

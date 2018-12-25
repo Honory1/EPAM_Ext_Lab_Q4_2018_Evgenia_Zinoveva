@@ -3,18 +3,11 @@
   <Comment CommentText="Персональный блог. Регистрация пользователей. Создание блога (блогов). Создание и редактирование статей блога. Теги статей. Поиск по тегам, тексту. Комментирование статей.&#xD;&#xA;*Управление пользователями. Модерирование статей и комментариев.">
     <Position X="0.5" Y="0.5" Height="1.847" Width="2.013" />
   </Comment>
-  <Class Name="ClassLibrary1.UsersRoles">
-    <Position X="3.25" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAQAAAAAAAAQAAEAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>UsersRoles.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ClassLibrary1.Blog">
     <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAgAAAAAAAAAAAAAAQAAARAAAABCAAAAAAgQ=</HashCode>
-      <FileName>Blog.cs</FileName>
+      <FileName>Models\Blog.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="User" />
@@ -24,7 +17,7 @@
     <Position X="6.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAIAAAgAAAAAAAAAAAAAAAAAAAAABABAABAAAAAA=</HashCode>
-      <FileName>Article.cs</FileName>
+      <FileName>Models\Article.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Blog" />
@@ -33,18 +26,15 @@
   <Class Name="ClassLibrary1.Administrator">
     <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Administrator.cs</FileName>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Administrator.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="UsersRoles" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="ClassLibrary1.Comments">
     <Position X="7" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAQAAAAAAEAEAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Comments.cs</FileName>
+      <FileName>Models\Comments.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Article" />
@@ -54,7 +44,7 @@
     <Position X="5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAIAAEAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Tags.cs</FileName>
+      <FileName>Models\Tags.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Article" />
@@ -63,29 +53,24 @@
   <Class Name="ClassLibrary1.Moderator">
     <Position X="0.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAAAAAIAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Moderator.cs</FileName>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Moderator.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="UsersRoles" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="ClassLibrary1.SearchResult">
     <Position X="0.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SearchResult.cs</FileName>
+      <FileName>Models\SearchResult.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClassLibrary1.User">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAAAAQABgAAAAABAAAAAEAAAAAAAQAAAEAgA=</HashCode>
-      <FileName>User.cs</FileName>
+      <HashCode>IAAAAIAAAAAAQABgAAAAABAAAAEEAAAAAgIQAAAEAgA=</HashCode>
+      <FileName>Models\User.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="UsersRoles" />
-    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

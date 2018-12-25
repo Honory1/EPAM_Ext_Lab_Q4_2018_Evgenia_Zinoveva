@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ClassLibrary1
 {
-    public class UsersList
+    public class SearchResult
     {
     }
 }
