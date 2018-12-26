@@ -12,14 +12,6 @@ namespace ClassLibrary1
         private int email;
         private int role;
 
-        public UsersRoles UsersRoles
-        {
-            get => default(UsersRoles);
-            set
-            {
-            }
-        }
-
         public void PersonalDataEditing()
         {
             throw new System.NotImplementedException();
