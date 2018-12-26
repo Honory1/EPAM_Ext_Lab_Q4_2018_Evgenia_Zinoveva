@@ -7,15 +7,6 @@ namespace ClassLibrary1
 {
     internal class Administrator : User
     {
-        /// <value></value>
-        public UsersRoles UsersRoles
-        {
-            get => default(UsersRoles);
-            set
-            {
-            }
-        }
-
         public void UsersMenegment()
         {
             throw new System.NotImplementedException();
