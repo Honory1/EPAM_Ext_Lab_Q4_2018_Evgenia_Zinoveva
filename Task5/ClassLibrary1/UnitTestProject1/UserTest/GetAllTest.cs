@@ -4,7 +4,7 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
-    public class GetAllTest
+    public class GetAllTest //todo pn по тестированию UserRepository должен создасться один класс UserTests и в нём все методы. Для каждой другой сущности - свой тестовый класс. 
     {
         [TestMethod]
         public void TestMethodGetAll()
