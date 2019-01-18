@@ -17,7 +17,7 @@
                 var output = input[i];
                 var flag = output.IsTheStringAPositiveInteger();
                 Console.WriteLine("{0} - {1}", input[i], flag);
-                Console.WriteLine();
+                Console.WriteLine();//todo pn консоль открылась и закрылась
             }
         }
     }

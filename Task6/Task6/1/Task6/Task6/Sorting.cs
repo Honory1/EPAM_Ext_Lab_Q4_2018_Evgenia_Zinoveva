@@ -52,7 +52,7 @@
             {
                 for (int j = i + 1; j < arr.Length; j++)
                 {
-                    if (this.compare(arr[j], arr[i]))
+                    if (this.compare(arr[j], arr[i]))//todo pn ты не передаешь этот делегат в качестве входного параметра при вызове метода сортировки в Program.cs. Надо переделать, иначе просто неудобно пользоваться твоим кодом.
                     {
                         this.Swap(ref arr[j], ref arr[i]);
                     }

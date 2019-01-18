@@ -69,7 +69,7 @@
 
         public void Greet(string anotherPerson, int time, Queue<Person> employees)
         {
-            if (time < 12)
+            if (time < 12)//todo pn хардкод
             {
                 foreach (Person person in employees)
                 {

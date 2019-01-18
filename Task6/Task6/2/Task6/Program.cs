@@ -32,7 +32,7 @@
 
             Exit("Bill");
             Exit("Lola");
-            Exit("John");
+            Exit("John");//todo pn консоль открылась и закрылсь :)
         }        
     }
 }
