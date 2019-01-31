@@ -64,26 +64,31 @@
             Message leavingPerson = new Message(person.Farewell);
             person.Leave += this.Leaving;
             person.Leaving(name, employees);
-            person.Farewell(name, employees);
+
+            if (employees.Count > 0)
+                person.Farewell(name, employees);
         }
 
         public void Greet(string anotherPerson, int time, Queue<Person> employees)
         {
-            if (time < 12)//todo pn хардкод
+            const int noon = 12;
+            const int evening = 17;
+
+            if (time < noon)
             {
                 foreach (Person person in employees)
                 {
                     Console.WriteLine("'Good morning, {0}!', - {1} said", anotherPerson, person.PersonName);
                 }
             }
-            else if (time >= 12 && time < 17)
+            else if (time >= noon && time < evening)
             {
                 foreach (Person person in employees)
                 {
                     Console.WriteLine("'Good day, {0}!', - {1} said", anotherPerson, person.PersonName);
                 }
             }
-            else if (time >= 17)
+            else if (time >= evening)
             {
                 foreach (Person person in employees)
                 {

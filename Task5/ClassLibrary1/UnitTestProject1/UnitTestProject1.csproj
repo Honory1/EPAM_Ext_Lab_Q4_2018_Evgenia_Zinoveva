@@ -49,11 +49,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserTest\GetAllTest.cs" />
+    <Compile Include="Tests\UserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserTest\GetTest.cs" />
-    <Compile Include="UserTest\SaveTest.cs" />
-    <Compile Include="UserTest\DeleteTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

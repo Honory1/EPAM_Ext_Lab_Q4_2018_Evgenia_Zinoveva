@@ -5,7 +5,8 @@
     using System.Linq;
     using System.Text;
 
-    public class User : IBaseRepository<User>//todo pn user отдельно, UserRepository отдельно. Не нужно смешивать доменную сущность и DAL сущность. Разнести на два класса
+    public class User : IBaseRepository<User>//todo pn user отдельно, UserRepository отдельно.
+        //Не нужно смешивать доменную сущность и DAL сущность. Разнести на два класса
     {
         public string name;
         public int id;

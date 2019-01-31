@@ -1,27 +1,31 @@
-<!DOCTUPE HTML>
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<title> Login </title>
 		<link rel="stylesheet" type="text/css" href="Styles/styles.css"/>
-		<link type="image/gif" rel="shortcut icon" href="../Images/cmr.gif" />	
 	</head>
 	
 	<body>
 		<header>
+		<ul class="menu-main">
+				<li><a href="Registration.html">Registartion</a></li>
+			</ul>
 		</header>
-	
-		<nav>
+		
+		<nav class = "left-menu">
 			<h3>Navigation</h3>
-            <div class="nav-btn"><button><a href="Registration.html">REGISTRATION</a></button></div><br>
-			<div class="nav-btn"><button><a href="Table.html">TABLE</a></button></div><br>
-			<div class="nav-btn"><button><a href="ModalWindowStatic.html">MODAL WINDOWS STATIC</a></button></div><br>
-			<div class="nav-btn"><button><a href="ModalWindowDinamic.html">MODAL WINDOWS DINAMIC</a></button></div>
+			<ul class = "menu-nav">			
+			<li><a href="Registration.html">REGISTRATION</a></li>
+			<li><a href="Table.html">TABLE</a></li>
+			<li><a href="ModalWindowStatic.html">MODAL WINDOWS STATIC</a></li>
+			<li><a href="ModalWindowDinamic.html">MODAL WINDOWS DINAMIC</a></li>
+			</ul>
 		</nav>
 	
 		<article>
 			<form method="post" action="/login/">
 				<fieldset>
-					<legend>LogIn</legend>
+					<legend>Login</legend>
 						<label><input type="email" required placeholder = "username"><br>				
 						<label><input type="password" required placeholder ="password"><br>
 						<button type="submit">LOGIN</button><br>
